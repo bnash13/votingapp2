@@ -1,0 +1,35 @@
+.container {
+    display: flex; /* or inline-flex */
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+h2 {
+    width: 100%;
+}
+
+.item {
+    width: 260px;
+    padding: 1px;
+    order: 0; /* default is 0 */
+    text-align: center;
+}
+
+.item > mat-card {
+    width: 100%;
+}
+
+.item > mat-card-title {
+    font-size: larger;
+}
+
+mat-card img{
+    object-fit: cover; /*this makes the image in src fit to the size specified below*/
+    width: 150px; /* Here you can use wherever you want to specify the width and also the height of the <img>*/
+    height: 150px;
+}
+
+mat-card p{
+    height: 25px;
+}

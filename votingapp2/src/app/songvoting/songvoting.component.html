@@ -1,0 +1,105 @@
+<div>
+    <div class="container" *ngIf="!loading">
+        <h2>Pick a {{catName}} song to vote for</h2>
+        <div class="item" *ngFor="let item of items">
+            <mat-card class="mat-elevation-z4">
+                <mat-card-header>
+                  <h5>{{item.title}}</h5>
+                </mat-card-header>
+                <img mat-card-image src={{item.image}}>
+                <mat-card-content>
+                  <p>
+                    {{item.artist}}
+                  </p>
+                </mat-card-content>
+                <mat-card-actions>
+                  <button mat-button (click)="open(mymodal, item.title, item.youtubeID)" >VOTE</button>
+                </mat-card-actions>
+              </mat-card>
+        </div>
+    </div>
+    <div>
+        <ng-template #mymodal let-modal>
+            <div class="modal-header">
+                <h4 class="modal-title" id="modal-basic-title">Voting for {{modalVote}}</h4>
+            </div>
+            <div class="modal-body">
+                <youtube-player 
+                    videoId={{modalyoutubeID}}
+                    suggestedQuality="highres" 
+                    [height]="250" 
+                    [width]="465" 
+                    [startSeconds]="20"
+                    [endSeconds]="80">
+                </youtube-player>
+                <div *ngIf="!voted">
+                  <br>
+                  <h6>
+                    Please enter the following details so we can validate your vote:
+                  </h6>
+                  <form [formGroup]="voteForm" novalidate (ngSubmit)="voteSubmit()"> 
+                      <div class="form-group">
+                        <label class="center-block">Name:
+                          <input class="form-control" formControlName="name">
+                        </label>
+                      </div>
+                      <div *ngIf="voteForm.controls['name'].invalid && (voteForm.controls['name'].dirty || voteForm.controls['name'].touched)" class="alert alert-danger">
+                        <div>
+                          Name is Invalid.
+                        </div>
+                      </div>
+                      <br>
+                      <div class="form-group">
+                        <label class="center-block">Email:
+                          <input class="form-control" formControlName="email">
+                        </label>
+                      </div>
+                      <div *ngIf="voteForm.controls['email'].invalid && (voteForm.controls['email'].dirty || voteForm.controls['email'].touched)" class="alert alert-danger">
+                        <div>
+                          Email is Invalid.
+                        </div>
+                      </div>
+                      <br>
+                      <div class="form-group">
+                        <label class="center-block">Province:
+                          <select class="form-control" formControlName="province">
+                            <option value="Quebec">Quebec</option>
+                            <option value="Ontario">Ontario</option>
+                            <option value="Alberta">Alberta</option>
+                            <option value="British Columbia">British Columbia</option>
+                            <option value="Manitoba">Manitoba</option>
+                            <option value="New Brunswick">New Brunswick</option>
+                            <option value="Newfoundland and Labrador">Newfoundland and Labrador</option>
+                            <option value="Northwest Territories">Northwest Territories</option>
+                            <option value="Nova Scotia">Nova Scotia</option>
+                            <option value="Nunavut">Nunavut</option>
+                            <option value="Prince Edward Island">Prince Edward Island</option>
+                            <option value="Saskatchewan">Saskatchewan</option>
+                            <option value="Yukon">Yukon</option>
+                          </select>
+                        </label>
+                      </div>
+                      <div *ngIf="voteForm.controls['province'].invalid && (voteForm.controls['province'].dirty || voteForm.controls['province'].touched)" class="alert alert-danger">
+                        <div>
+                          Province is Invalid.
+                        </div>
+                      </div>
+                      <br>
+                      <button class="btn btn-outline-dark" type="submit">Submit Vote</button>
+                      <br>
+                      <p>*Please note that only one vote per email address will be considered.</p>
+                  </form>
+                </div>
+                <div *ngIf="voted">
+                  <h6>
+                    Thanks for your vote: {{ voteResponse }}
+                  </h6>
+                </div>
+  
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Cancel</button>
+            </div>
+        </ng-template>
+    </div>
+</div> 

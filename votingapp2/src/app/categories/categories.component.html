@@ -1,0 +1,10 @@
+<div>
+    <h2>Choose a category to vote for</h2>
+    <ul>
+        <li *ngFor="let cat of catData">
+        <img [src]="cat.image" [alt]="cat.name" routerLink="/vote-{{cat.name}}/{{cat.name}}/">
+        <h4>{{cat.name}}</h4>
+        </li>
+    </ul>
+    <router-outlet></router-outlet>
+</div>
