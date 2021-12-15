@@ -25,12 +25,7 @@
             </div>
             <div class="modal-body">
                 <youtube-player 
-                    videoId={{modalyoutubeID}}
-                    suggestedQuality="highres" 
-                    [height]="250" 
-                    [width]="465" 
-                    [startSeconds]="20"
-                    [endSeconds]="80">
+                    videoId={{modalyoutubeID}}>
                 </youtube-player>
                 <div *ngIf="!voted">
                   <br>
