@@ -112,109 +112,109 @@ export class SongvotingComponent implements OnInit {
         title: "Satyameva Jayate",
         artist: "Kusu Kusu",
         image: 'https://mru230mouv.ca/wp-content/uploads/2021/12/No-3-.Kusu-Kusu-Satyameva-Jayate.jpg',
-        youtubeID: ''
+        youtubeID: 'RgzLnmTaCAU'
       },
       {
         title: "Chehre",
         artist: "Rang Dariya",
         image: 'https://mru230mouv.ca/wp-content/uploads/2021/12/No-4-Rang-Dariya-chehre.jpg',
-        youtubeID: ''
+        youtubeID: 'Jrrs2izNSL4'
       },
       {
         title: "Badshah",
         artist: "Paani Paani",
         image: 'https://mru230mouv.ca/wp-content/uploads/2021/12/No-5-Paani-Paani-Badshah.jpg',
-        youtubeID: ''
+        youtubeID: 'j9J7cjGU_jM'
       },
       {
         title: "Mimi",
         artist: "Param Sundari",
         image: 'https://mru230mouv.ca/wp-content/uploads/2021/12/No-6-Param-Sundari-Mimi.jpg',
-        youtubeID: ''
+        youtubeID: 'w4ClQO0FFQg'
       },
       {
         title: "Satyameva Jayate",
         artist: "Tenu Lehenga",
         image: 'https://mru230mouv.ca/wp-content/uploads/2021/12/No-7-Tenu-Lehenga-Satyameva-Jayate.jpg',
-        youtubeID: ''
+        youtubeID: 'eZRpNmSgVOg'
       },
       {
         title: "Mere Yaara",
         artist: "Sooryavanshi",
         image: 'https://mru230mouv.ca/wp-content/uploads/2021/12/No-8-Mere-Yaara-Sooryavanshi.jpg',
-        youtubeID: ''
+        youtubeID: 'iTAj46KJZtM'
       },
       {
         title: "Tip Tip Barsa",
         artist: "Sooryavanshi",
         image: 'https://mru230mouv.ca/wp-content/uploads/2021/12/No-9-Tip-Tip-Barsa-Sooryavanshi.jpg',
-        youtubeID: ''
+        youtubeID: 'l9u8Zb4fY1c'
       },
       {
         title: "Najaa",
         artist: "Sooryavanshi",
         image: 'https://mru230mouv.ca/wp-content/uploads/2021/12/No-10-.Najaa-Sooryavanshi.jpg',
-        youtubeID: ''
+        youtubeID: 'cX6g4cbVBwI'
       },
       {
         title: "Zaalima Coca Cola",
         artist: "",
         image: 'https://mru230mouv.ca/wp-content/uploads/2021/12/No-11-.Zaalima-Coca-Cola.jpg',
-        youtubeID: ''
+        youtubeID: 't6n-BVCelnU'
       },
       {
         title: "Dil Ko karaar Aaaya",
         artist: "",
         image: 'https://mru230mouv.ca/wp-content/uploads/2021/12/No-12-Dil-Ko-karaar-Aaaya.jpg',
-        youtubeID: ''
+        youtubeID: 'lX3vT_Gm_HE'
       },
       {
         title: "Yo Yo honey Singh",
         artist: "Saiyaan ji",
         image: 'https://mru230mouv.ca/wp-content/uploads/2021/12/No-13-Saiyaan-ji-Yo-Yo-honey-Singh.jpg',
-        youtubeID: ''
+        youtubeID: 'VEkj2sanAeU'
       },
       {
         title: "Tumse Bhi Zyada",
         artist: "Tadap",
         image: 'https://mru230mouv.ca/wp-content/uploads/2021/12/No-14-Tumse-Bhi-Zyada-Tadap.jpg',
-        youtubeID: ''
+        youtubeID: '7JaQPqf-X4Y'
       },
       {
         title: "Tu mera Hogaya Hai",
         artist: "Tadap",
         image: 'https://mru230mouv.ca/wp-content/uploads/2021/12/No-15-.Tu-mera-Hogaya-Hai-tadap.jpg',
-        youtubeID: ''
+        youtubeID: 'cZkYaSk2ZMk'
       },
       {
         title: "Aashiqui Aa gayi",
         artist: "Radhe Shyam",
         image: 'https://mru230mouv.ca/wp-content/uploads/2021/12/No-16-Aashiqui-Aa-gayi-song-Radhe-Shyam.jpg',
-        youtubeID: ''
+        youtubeID: 'c-NaCU2n8jg'
       },
       {
         title: "Hum Do hamare Do",
         artist: "Bansuri",
         image: 'https://mru230mouv.ca/wp-content/uploads/2021/12/No-17-Bansuri-Hum-Do-hamare-Do.jpg',
-        youtubeID: ''
+        youtubeID: 'jpQ9Rs5ZFNE'
       },
       {
         title: "Vaaste",
         artist: "",
         image: 'https://mru230mouv.ca/wp-content/uploads/2021/12/No-18-Vaaste.jpg',
-        youtubeID: ''
+        youtubeID: 'BBAyRBTfsOU'
       },
       {
         title: "Khairiyat",
         artist: "Chichorre",
         image: 'https://mru230mouv.ca/wp-content/uploads/2021/12/No-19-Khairiyat-Chichorre.jpg',
-        youtubeID: ''
+        youtubeID: '9-AKLAfpjrI'
       },
       {
         title: "Garmi",
         artist: "Street Dancer 3D",
         image: 'https://mru230mouv.ca/wp-content/uploads/2021/12/No-20-garmi-Street-Dancer-3D.jpg',
-        youtubeID: ''
+        youtubeID: 'IE8OD5FbU-c'
       },
     ];
 
