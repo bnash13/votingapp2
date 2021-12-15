@@ -71,15 +71,15 @@ export class SongvotingComponent implements OnInit {
 
   voteSubmit(): void {
     // Process checkout data here
-    this.castVote(this.voteForm.value);
+    this.castVote(this.voteForm.value, this.modalVote);
   
     //console.warn('Your order has been submitted', this.voteForm.value);
     this.voteForm.reset();
   }
 
-  castVote(player:any) {
+  castVote(player:any, vote:any) {
     this.http
-      .post(`http://137.220.53.124:4000/vote`, { player })
+      .post(`http://137.220.53.124:4000/vote`, { player, vote })
       .subscribe((res: any) => {
         this.voteResponse = res.player;
         this.voted = true;

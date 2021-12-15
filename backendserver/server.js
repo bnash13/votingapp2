@@ -4,6 +4,11 @@ const bodyParser = require('body-parser');
 /* const Pusher = require('pusher'); */
 const { lookup } = require('geoip-lite');
 
+const mongo = require('mongodb').MongoClient
+const mongoUrl = 'mongodb://localhost:27017'
+ObjectID = require('mongodb').ObjectId
+
+
 const app = express();
 const port = 4000;
 /* const pusher = new Pusher({
@@ -13,6 +18,29 @@ const port = 4000;
   cluster: 'eu',
   encrypted: true,
 }); */
+
+//------------------DB---------------------------
+
+function addVoteToDb(vote) {
+  mongo.connect('mongodb://localhost:27017', {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+  }, (err, client) => {
+    if (err) {
+      console.error(err)
+      return
+    }
+    const db = client.db('voteDB')
+    const collection = db.collection('votes')
+    collection.insertOne(vote, function(err, res) {
+      if (err) throw err;
+      console.log("1 vote inserted");
+      client.close();
+    });
+  })
+}
+
+//-----------------------------------------------
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -28,12 +56,17 @@ app.use((req, res, next) => {
 app.post('/vote', (req, res) => {
   const { body } = req;
   const { player } = body;
+  const { vote } = body;
+  let data = [];
   var ip = req.headers['x-forwarded-for'] || req.socket.remoteAddress;
 /*   pusher.trigger('vote-channel', 'vote', {
     player,
   }); */
-  console.log(player, lookup(ip));
-  res.json({ player });
+  data.push(player);
+  data.push(vote);
+  data.push(ip);
+  console.log(data);
+  //addVoteToDb(data);
 });
 
 app.get('/handle',(req, res) => {
@@ -42,6 +75,8 @@ app.get('/handle',(req, res) => {
   var ip = req.headers['x-forwarded-for'] || req.socket.remoteAddress;
   console.log("get req received", ip);
   });
+
+
 
 app.listen(port, () => {
   console.log(`Server started on port ${port}`);
