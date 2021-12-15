@@ -79,7 +79,7 @@ export class SongvotingComponent implements OnInit {
 
   castVote(player:any) {
     this.http
-      .post(`http://localhost:4000/vote`, { player })
+      .post(`http://http://137.220.53.124:4000/vote`, { player })
       .subscribe((res: any) => {
         this.voteResponse = res.player;
         this.voted = true;
@@ -380,7 +380,7 @@ export class SongvotingComponent implements OnInit {
     let euroSongs = [
       {
         title: "Easy on me",
-        artist: "Adel", 
+        artist: "Adel",
         image: 'https://mru230mouv.ca/wp-content/uploads/2021/12/no-1-Easy-on-me.jpg',
         youtubeID: 'X-yIEMduRXk'
       },
