@@ -79,7 +79,7 @@ export class SongvotingComponent implements OnInit {
 
   castVote(player:any) {
     this.http
-      .post(`http://http://137.220.53.124:4000/vote`, { player })
+      .post(`http://137.220.53.124:4000/vote`, { player })
       .subscribe((res: any) => {
         this.voteResponse = res.player;
         this.voted = true;
