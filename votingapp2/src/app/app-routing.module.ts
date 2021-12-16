@@ -3,10 +3,10 @@ import { RouterModule, Routes } from '@angular/router';
 import { SongvotingComponent } from "../app/songvoting/songvoting.component";
 
 const routes: Routes = [
-  { path: 'vote-Sega/:category', component: SongvotingComponent },
+  { path: 'vote-Séga/:category', component: SongvotingComponent },
   { path: 'vote-Bollywood/:category', component: SongvotingComponent },
-  { path: 'vote-International/:category', component: SongvotingComponent },
-  { path: 'vote-Public/:category', component: SongvotingComponent }
+  { path: 'vote-Internationale/:category', component: SongvotingComponent },
+  { path: 'vote-Choix Du Public-Canada/:category', component: SongvotingComponent }
 ];
 
 @NgModule({

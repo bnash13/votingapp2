@@ -570,16 +570,16 @@ export class SongvotingComponent implements OnInit {
     ];
 
     switch (type) {
-      case "Sega":
+      case "Séga":
         this.items = segaSongs;
         break;
       case "Bollywood":
         this.items = bhojSongs;
         break;
-      case "International":
+      case "Internationale":
         this.items = euroSongs;
         break;
-      case "Public":
+      case "Choix Du Public-Canada":
         this.items = catSongs;
         break;
     }

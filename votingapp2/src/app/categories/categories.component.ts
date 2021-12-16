@@ -15,7 +15,7 @@ export class CategoriesComponent implements OnInit {
       voted = false;
       catData = [
         {
-          name: 'Sega',
+          name: 'Séga',
           image: 'https://mru230mouv.ca/wp-content/uploads/2021/12/catSega.jpg'
         },
         {
@@ -23,12 +23,12 @@ export class CategoriesComponent implements OnInit {
           image: 'https://mru230mouv.ca/wp-content/uploads/2021/12/catBolly.jpeg',
         },
         {
-          name: 'International',
+          name: 'Internationale',
           image: 'https://mru230mouv.ca/wp-content/uploads/2021/12/catInt.jpg',
         },
         {
-          name: "Public",
-          image: 'https://mru230mouv.ca/wp-content/uploads/2021/12/catPub.png',
+          name: "Choix Du Public-Canada",
+          image: 'https://mru230mouv.ca/wp-content/uploads/2021/12/ca-flag-scaled.jpg',
         },
       ];
       voteCount = {
