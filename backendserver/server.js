@@ -57,16 +57,14 @@ app.post('/vote', (req, res) => {
   const { body } = req;
   const { player } = body;
   const { vote } = body;
-  let data = [];
   var ip = req.headers['x-forwarded-for'] || req.socket.remoteAddress;
 /*   pusher.trigger('vote-channel', 'vote', {
     player,
   }); */
-  data.push(player);
-  data.push(vote);
-  data.push(ip);
+  let data = { votedSong: vote, name: player.name, email: player.email, prov: player.province, ipAdd: ip};
   console.log(data);
-  //addVoteToDb(data);
+  addVoteToDb(data);
+  res.json({ player });
 });
 
 app.get('/handle',(req, res) => {

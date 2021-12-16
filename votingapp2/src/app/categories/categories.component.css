@@ -54,3 +54,14 @@ div ul li p {
     font-weight: bold;
     margin: 4px 0;
 }
+
+@media only screen and (max-width: 600px) {
+    div ul li {
+        padding: 5px;
+    }
+    div ul li img {
+        width: 100px;
+        height: 65px;
+
+    }
+  }
