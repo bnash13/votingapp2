@@ -61,7 +61,7 @@ app.post('/vote', (req, res) => {
 /*   pusher.trigger('vote-channel', 'vote', {
     player,
   }); */
-  let data = { votedSong: vote, name: player.name, email: player.email, prov: player.province, ipAdd: ip};
+  let data = { votedSong: vote, name: player.name, email: player.email, country: player.pays, prov: player.province, ipAdd: ip};
   console.log(data);
   addVoteToDb(data);
   res.json({ player });

@@ -61,6 +61,21 @@
                       </div>
                       <br>
                       <div class="form-group">
+                        <label class="center-block">Pays:
+                          <select class="form-control" formControlName="pays">
+                            <option value="Canada">Canada</option>
+                            <option value="Maurice">Maurice</option>
+                            <option value="Other">Other</option>
+                          </select>
+                        </label>
+                      </div>
+                      <div *ngIf="voteForm.controls['pays'].invalid && (voteForm.controls['pays'].dirty || voteForm.controls['pays'].touched)" class="alert alert-danger">
+                        <div>
+                          Invalid.
+                        </div>
+                      </div>
+                      <br>
+                      <div class="form-group" *ngIf="voteForm.value.pays == 'Canada'">
                         <label class="center-block">Province:
                           <select class="form-control" formControlName="province">
                             <option value="Quebec">Quebec</option>
@@ -78,11 +93,6 @@
                             <option value="Yukon">Yukon</option>
                           </select>
                         </label>
-                      </div>
-                      <div *ngIf="voteForm.controls['province'].invalid && (voteForm.controls['province'].dirty || voteForm.controls['province'].touched)" class="alert alert-danger">
-                        <div>
-                          Province is Invalid.
-                        </div>
                       </div>
                       <br>
                       <button class="btn btn-outline-dark" type="submit">Voter</button>

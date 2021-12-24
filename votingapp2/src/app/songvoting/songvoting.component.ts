@@ -29,6 +29,7 @@ export class SongvotingComponent implements OnInit {
     voteForm = this.formBuilder.group({
       name: '',
       email: '',
+      pays: '',
       province: '',
     });
 
@@ -40,6 +41,10 @@ export class SongvotingComponent implements OnInit {
         Validators.minLength(4),
       ]),
       email: new FormControl('', [
+        Validators.required,
+        Validators.minLength(4),
+      ]),
+      pays: new FormControl('', [
         Validators.required,
         Validators.minLength(4),
       ]),
